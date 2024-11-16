@@ -1,0 +1,105 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Adicionar Escala - Escalas+</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">Escalas+</a>
+      <ul class="navbar-menu">
+        <li><a href="index.html" class="active">Adicionar Escala</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="navbar-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Container Principal -->
+  <div class="container">
+    <section class="form-section">
+      <h1>Gerenciar Escalas</h1>
+      <p>Adicione uma nova escala, configure horários e evite conflitos automaticamente.</p>
+
+      <!-- Formulário -->
+      <form id="escalaForm" class="form">
+        <div class="form-group">
+          <label for="nomeEvento">Nome do Evento</label>
+          <input type="text" id="nomeEvento" placeholder="Ex: Reunião Geral" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="data">Data</label>
+            <input type="date" id="data" required>
+          </div>
+          <div class="form-group">
+            <label for="horaInicio">Horário de Início</label>
+            <input type="time" id="horaInicio" required>
+          </div>
+          <div class="form-group">
+            <label for="horaFim">Horário de Término</label>
+            <input type="time" id="horaFim" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="matricula">Matrícula do Funcionário</label>
+          <input type="text" id="matricula" placeholder="Ex: 12345" required>
+        </div>
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" placeholder="Ex: João Silva" required>
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" placeholder="Ex: (11) 99999-9999" required>
+        </div>
+
+        <button type="submit" class="btn">Adicionar Escala</button>
+      </form>
+
+      <!-- Mensagem de Alerta -->
+      <div id="alerta" class="alert hidden">
+        <p>Conflito de horários detectado! A escala não foi adicionada.</p>
+      </div>
+    </section>
+
+    <!-- Tabela de Escalas -->
+    <section class="table-section">
+      <h2>Escalas Cadastradas</h2>
+      <div class="table-responsive">
+        <table id="tabelaEscalas">
+          <thead>
+            <tr>
+              <th>Evento</th>
+              <th>Data</th>
+              <th>Início</th>
+              <th>Término</th>
+              <th>Matrícula</th>
+              <th>Nome</th>
+              <th>Telefone</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dados dinâmicos -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Escalas+</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-brand">Escalas+</a>
+      <ul class="navbar-menu">
+        <li><a href="index.html">Adicionar Escala</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      </ul>
+      <div class="navbar-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Container Principal -->
+  <div class="container">
+    <section class="dashboard-section">
+      <h1>Dashboard</h1>
+      <p>Visualize insights baseados nos dados cadastrados.</p>
+
+      <div class="charts">
+        <div class="chart-container">
+          <h2>Total de Horas por Funcionário</h2>
+          <canvas id="graficoHorasPorFuncionario"></canvas>
+        </div>
+        <div class="chart-container">
+          <h2>Quantidade de Escalas por Evento</h2>
+          <canvas id="graficoEventos"></canvas>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
